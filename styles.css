@@ -63,6 +63,9 @@ body {
     display: none;
     cursor: pointer;
     padding: 0.5rem;
+    z-index: 1000;
+    border: none;
+    background: none;
 }
 
 .hamburger span {
@@ -72,6 +75,19 @@ body {
     background-color: #cc0000;
     margin: 5px 0;
     transition: all 0.3s ease;
+}
+
+/* Hamburger animation */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
 }
 
 /* Hero Section */
@@ -111,11 +127,11 @@ body {
 /* Button Container in Hero Section */
 .button-container {
     display: flex;
-    justify-content: space-around;
+    gap: 2rem;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
-    padding: 0 2rem;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -135,6 +151,43 @@ body {
     transform: translateY(-2px);
     background-color: #f8f8f8;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Mobile styles */
+@media screen and (max-width: 480px) {
+    .button-container {
+        flex-direction: column;
+        padding: 0 1rem;
+        gap: 1rem;
+    }
+
+    .cta-button {
+        width: 100%;
+        min-width: unset;
+        max-width: 100%;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .hero-subtitle {
+        padding: 0 1rem;
+    }
+
+    .hero-description {
+        padding: 0 1rem;
+    }
+}
+
+/* Tablet and larger phones */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .button-container {
+        padding: 0 2rem;
+    }
+
+    .cta-button {
+        min-width: 180px;
+        padding: 1.2rem 2rem;
+    }
 }
 
 /* Personal Section */
@@ -347,15 +400,19 @@ footer {
 
     .nav-links {
         display: none;
-        width: 100%;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 0;
         left: 0;
-        background-color: white;
-        padding: 1rem 0;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.98);
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        gap: 2rem;
+        padding: 1rem;
+        transition: all 0.3s ease;
+        z-index: 999;
     }
 
     .nav-links.active {
@@ -363,7 +420,19 @@ footer {
     }
 
     .nav-links li {
-        margin: 1rem 0;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+    }
+
+    .nav-links.active li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+        padding: 1rem;
     }
 
     .logo {
