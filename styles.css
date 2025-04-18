@@ -306,21 +306,22 @@ footer {
 
 .signature .school {
     font-size: 1.1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.3rem;
 }
 
-.signature .contact {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9);
+.signature .phone {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
 }
 
-.signature .contact span {
-    margin: 0 0.5rem;
+.signature .email {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
 }
 
 .copyright {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
+    opacity: 0.7;
 }
 
 /* Responsive Design */
