@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBM Engineering and Design</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="#home">MBM Engineering and Design</a></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#personal">About</a></li>
+            <li><a href="#mission">My Mission</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Welcome to MBM Engineering and Design</h1>
+            <p>This is the website of Matthew Bernard Marsh.</p>
+            <div class="button-container">
+                <button class="cta-button about-btn" onclick="document.getElementById('personal').scrollIntoView({behavior: 'smooth'})">About Me</button>
+                <button class="cta-button">Learn More</button>
+            </div>
+        </section>
+
+        <section id="personal" class="personal">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <!-- Replace the src with your actual image path -->
+                    <img src="IMG_7933.JPG" alt="Your Profile Picture" id="profile-pic">
+                </div>
+                <div class="profile-content">
+                    <h2>About Me</h2>
+                    <p class="bio">
+                        My name is Matthew Marsh. I am a Sophomore Mechanical Engineering major at the University of St. Thomas. 
+                        I am a hardworking and dedicated student who is always looking for new opportunities to learn and grow. 
+                        I love to work on personal projects and learn new skills. 
+                        I am able to learn quickly and I am always looking for new challenges. 
+                        My best skills are my ability to work in a team setting and my ability to communicate effectively.
+                        I am a very driven person and I am always looking for new ways to improve my skills and knowledge.
+                        I will be graduating with my B.S. in Mechanical Engineering in the Spring of 2027.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="mission" class="about">
+            <h2>My Mission</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Why Mechanical Engineering?</h3>
+                    <p> I have been driven since a young age by my passion to inovate and solve
+                         real world problems.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Putting My Degree to Work</h3>
+                    <p>
+                        I believe the best way I learn is by going and doing hands on activities. I am always looking for opportunities to apply what 
+                        I learn in classroom to the real world, especially through internships and collaborative work.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Future Goals</h3>
+                    <p>As I grow and learn more about the field of mechanical engineering, I want to be able to contribute to solve issues in the world
+                         that are not just efficient but also sustainable. I find the long term impact of how I can improve my community as one of the most important parts of my career.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="phone number" placeholder="Phone Number" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MBM Engineering and Design. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
